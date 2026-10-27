@@ -1,0 +1,31 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.github",
+  "version": "1.0.0",
+  "name": "GitHub",
+  "description": "Your repos, pull requests, issues and Actions runs, with a failed run's log, with a token of yours.",
+  "icon": "chevron.left.forwardslash.chevron.right",
+  "color": "#24292f",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["api.github.com", "*.blob.core.windows.net"] },
+  "preferences": [
+    {
+      "id": "token",
+      "title": "Access Token",
+      "type": "password",
+      "required": true,
+      "description": "A fine-grained token (github.com › Settings › Developer settings › Personal access tokens › Fine-grained tokens) with Read-only for Metadata, Pull requests, Issues and Actions, on the repos you want (Get One… fills these in). One sees a single account's or organization's repos; for all of yours, a classic token with the repo scope. It's used only to ask GitHub's API.",
+      "link": "https://github.com/settings/personal-access-tokens/new?name=F2&description=F2%27s%20GitHub%20extension&metadata=read&pull_requests=read&issues=read&actions=read"
+    }
+  ],
+  "commands": [
+    { "id": "repos", "title": "Search Repos", "subtitle": "GitHub", "icon": "book.closed.fill", "keyword": "gh", "refresh": "30m", "root": true },
+    { "id": "my-prs", "title": "My Pull Requests", "subtitle": "GitHub", "icon": "arrow.triangle.pull", "refresh": "5m" },
+    { "id": "prs", "title": "Pull Requests", "hidden": true },
+    { "id": "issues", "title": "Issues", "hidden": true },
+    { "id": "runs", "title": "Actions Runs", "hidden": true },
+    { "id": "run-log", "title": "Failed Run's Log", "hidden": true }
+  ]
+}

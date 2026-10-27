@@ -1,0 +1,27 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.notion",
+  "version": "1.0.0",
+  "name": "Notion",
+  "description": "Your Notion pages and databases found by title, and a page read right in Quick Open, with an integration of yours.",
+  "icon": "n.square.fill",
+  "color": "#000000",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["api.notion.com"] },
+  "preferences": [
+    {
+      "id": "token",
+      "title": "Integration Secret",
+      "type": "password",
+      "required": true,
+      "description": "An internal integration's secret: make one at app.notion.com/developers/connections › Internal connections › Create a new connection (a workspace owner can), with Read content; its API token is on its Configuration tab. It sees only pages shared with it: in a page's ••• menu, Connections, add it (its subpages come too). A personal access token, made there too, works as well, and sees what you can. It's used only to ask api.notion.com.",
+      "link": "https://app.notion.com/developers/connections"
+    }
+  ],
+  "commands": [
+    { "id": "search", "title": "Search Notion", "subtitle": "Notion", "icon": "magnifyingglass", "keyword": "notion", "search": "script" },
+    { "id": "page", "title": "Page", "hidden": true }
+  ]
+}

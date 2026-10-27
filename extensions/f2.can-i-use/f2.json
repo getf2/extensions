@@ -1,0 +1,14 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.can-i-use",
+  "version": "1.0.0",
+  "name": "Can I Use",
+  "description": "Which browsers support a web feature, since which version, from caniuse.com's own data.",
+  "icon": "checkmark.seal.fill",
+  "color": "#c75000",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["raw.githubusercontent.com"] },
+  "commands": [{ "id": "features", "title": "Can I Use", "subtitle": "Browser support tables", "keyword": "caniuse", "refresh": "1d" }]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.hacker-news",
+  "version": "1.0.0",
+  "name": "Hacker News",
+  "description": "Hacker News' front page, Show HN and Ask HN, its search, and a story's comments read right in Quick Open.",
+  "icon": "y.square.fill",
+  "color": "#ff6600",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["hacker-news.firebaseio.com", "hn.algolia.com"] },
+  "preferences": [
+    {
+      "id": "size",
+      "title": "Stories",
+      "type": "dropdown",
+      "default": "30",
+      "options": ["30", "60", "90"],
+      "description": "How many of each list's stories are shown."
+    }
+  ],
+  "commands": [
+    { "id": "top", "title": "Hacker News", "subtitle": "Top stories", "keyword": "hn", "refresh": "5m" },
+    { "id": "show", "title": "Show HN", "subtitle": "Hacker News", "refresh": "15m" },
+    { "id": "ask", "title": "Ask HN", "subtitle": "Hacker News", "refresh": "15m" },
+    { "id": "search", "title": "Search Hacker News", "subtitle": "Hacker News", "search": "script" },
+    { "id": "comments", "title": "Comments", "hidden": true }
+  ]
+}

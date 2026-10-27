@@ -1,0 +1,14 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.pypi",
+  "version": "1.0.0",
+  "name": "PyPI",
+  "description": "Find Python packages on PyPI by name: what each is, its version, how much it's downloaded, and the command to install it.",
+  "icon": "cube.fill",
+  "color": "#006dad",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["pypi.org", "hugovk.dev"] },
+  "commands": [{ "id": "search", "title": "Search PyPI", "subtitle": "PyPI", "keyword": "pypi", "search": "script" }]
+}

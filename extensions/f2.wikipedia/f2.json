@@ -1,0 +1,27 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.wikipedia",
+  "version": "1.0.0",
+  "name": "Wikipedia",
+  "description": "Search Wikipedia, and read an article right in Quick Open.",
+  "icon": "w.circle.fill",
+  "color": "#3366cc",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["*.wikipedia.org"] },
+  "preferences": [
+    {
+      "id": "language",
+      "title": "Language",
+      "type": "text",
+      "default": "en",
+      "placeholder": "en",
+      "description": "Which Wikipedia: its language's code, as in its address (en, de, fr, is, ja…)."
+    }
+  ],
+  "commands": [
+    { "id": "search", "title": "Search Wikipedia", "subtitle": "Wikipedia", "keyword": "wiki", "search": "script" },
+    { "id": "article", "title": "Article", "hidden": true }
+  ]
+}

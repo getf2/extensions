@@ -1,0 +1,38 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.mdn",
+  "version": "1.0.0",
+  "name": "MDN",
+  "description": "Search MDN Web Docs, and read a doc right in Quick Open.",
+  "icon": "text.book.closed.fill",
+  "color": "#000000",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["developer.mozilla.org"] },
+  "preferences": [
+    {
+      "id": "locale",
+      "title": "Language",
+      "type": "dropdown",
+      "default": "en-US",
+      "options": [
+        { "value": "en-US", "title": "English" },
+        { "value": "de", "title": "Deutsch" },
+        { "value": "es", "title": "Español" },
+        { "value": "fr", "title": "Français" },
+        { "value": "ja", "title": "日本語" },
+        { "value": "ko", "title": "한국어" },
+        { "value": "pt-BR", "title": "Português (do Brasil)" },
+        { "value": "ru", "title": "Русский" },
+        { "value": "zh-CN", "title": "中文 (简体)" },
+        { "value": "zh-TW", "title": "正體中文 (繁體)" }
+      ],
+      "description": "Which of MDN's languages its docs are searched and read in."
+    }
+  ],
+  "commands": [
+    { "id": "search", "title": "Search MDN", "subtitle": "MDN Web Docs", "keyword": "mdn", "search": "script" },
+    { "id": "doc", "title": "Doc", "hidden": true }
+  ]
+}

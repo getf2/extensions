@@ -1,0 +1,14 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.homebrew",
+  "version": "1.0.0",
+  "name": "Homebrew",
+  "description": "Search Homebrew's formulae and casks: what each is, its version, how much it's installed, and the command to install it.",
+  "icon": "mug.fill",
+  "color": "#fbb040",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["formulae.brew.sh"] },
+  "commands": [{ "id": "search", "title": "Search Homebrew", "subtitle": "Homebrew", "keyword": "brew", "search": "script" }]
+}

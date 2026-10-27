@@ -1,0 +1,24 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.crates",
+  "version": "1.0.0",
+  "name": "crates.io",
+  "description": "Search Rust's crates on crates.io: what each is, how much it's used, where its code and docs are.",
+  "icon": "cube.box.fill",
+  "color": "#3b6837",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["crates.io", "api.deps.dev"] },
+  "preferences": [
+    {
+      "id": "size",
+      "title": "Results",
+      "type": "dropdown",
+      "default": "25",
+      "options": ["10", "25", "50"],
+      "description": "How many crates each search shows."
+    }
+  ],
+  "commands": [{ "id": "search", "title": "Search Crates", "subtitle": "crates.io", "keyword": "crate", "search": "script" }]
+}

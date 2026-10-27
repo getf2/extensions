@@ -1,0 +1,24 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.lorem-ipsum",
+  "version": "1.0.0",
+  "name": "Lorem Ipsum",
+  "description": "Placeholder paragraphs, sentences and words, as many as you type, made up fresh each time.",
+  "icon": "text.alignleft",
+  "color": "#8e8e93",
+  "runtime": "javascript",
+  "main": "index.js",
+  "preferences": [
+    {
+      "id": "classic",
+      "title": "Start with “Lorem ipsum dolor sit amet”",
+      "type": "checkbox",
+      "default": true,
+      "description": "As placeholder text usually does. The rest is made up fresh each time."
+    }
+  ],
+  "commands": [
+    { "id": "generate", "title": "Lorem Ipsum", "subtitle": "Placeholder text", "keyword": "lorem", "search": "script" }
+  ]
+}

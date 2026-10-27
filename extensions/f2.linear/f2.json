@@ -1,0 +1,29 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.linear",
+  "version": "1.0.0",
+  "name": "Linear",
+  "description": "Your Linear issues, its search, and a new issue made in one of your teams, with an API key of yours.",
+  "icon": "circle.lefthalf.striped.horizontal",
+  "color": "#5e6ad2",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["api.linear.app"] },
+  "preferences": [
+    {
+      "id": "apiKey",
+      "title": "API Key",
+      "type": "password",
+      "required": true,
+      "description": "Make one in Linear's Settings › Security & access › Personal API keys, with Read (and Create issues, for Create Linear Issue). It's used only to ask api.linear.app.",
+      "link": "https://linear.app/settings/account/security"
+    }
+  ],
+  "commands": [
+    { "id": "mine", "title": "My Linear Issues", "subtitle": "Linear", "icon": "person.crop.circle", "keyword": "linear", "refresh": "5m", "root": true },
+    { "id": "search", "title": "Search Linear Issues", "subtitle": "Linear", "icon": "magnifyingglass", "search": "script" },
+    { "id": "create", "title": "Create Linear Issue", "subtitle": "Linear", "icon": "plus.circle", "search": "script" },
+    { "id": "create-issue", "title": "Create Issue", "hidden": true }
+  ]
+}

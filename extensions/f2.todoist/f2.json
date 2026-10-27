@@ -1,0 +1,41 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.todoist",
+  "version": "1.0.0",
+  "name": "Todoist",
+  "description": "Your Todoist tasks for today and the week ahead, to complete or add right from Quick Open.",
+  "icon": "checkmark.circle.fill",
+  "color": "#e44332",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["api.todoist.com"] },
+  "preferences": [
+    {
+      "id": "token",
+      "title": "API Token",
+      "type": "password",
+      "required": true,
+      "description": "In Todoist: Settings › Integrations › Developer › Copy API token. Todoist's tokens can't be limited: it reads and changes all your tasks, so it's used only to ask api.todoist.com.",
+      "link": "https://app.todoist.com/app/settings/integrations/developer"
+    },
+    {
+      "id": "open",
+      "title": "Open Tasks In",
+      "type": "dropdown",
+      "default": "web",
+      "options": [
+        { "value": "web", "title": "Todoist on the web" },
+        { "value": "app", "title": "Todoist for Mac" }
+      ],
+      "description": "Where “Open in Todoist” goes: the app needs to be installed."
+    }
+  ],
+  "commands": [
+    { "id": "today", "title": "Today", "subtitle": "Todoist", "icon": "sun.max.fill", "keyword": "todoist", "refresh": "5m" },
+    { "id": "upcoming", "title": "Upcoming", "subtitle": "Todoist", "icon": "calendar", "refresh": "15m" },
+    { "id": "add", "title": "Add Task", "subtitle": "Todoist", "icon": "plus.circle.fill", "search": "script" },
+    { "id": "complete", "title": "Complete Task", "hidden": true },
+    { "id": "quick-add", "title": "Add a Task", "hidden": true }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.npm",
+  "version": "1.0.0",
+  "name": "npm",
+  "description": "Search npm's packages: what each is, how much it's used, where its code is.",
+  "icon": "shippingbox.fill",
+  "color": "#cb3837",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": {
+    "network": [
+      "registry.npmjs.org"
+    ]
+  },
+  "preferences": [
+    {
+      "id": "size",
+      "title": "Results",
+      "type": "dropdown",
+      "default": "25",
+      "options": [
+        {
+          "value": "10",
+          "title": "10"
+        },
+        {
+          "value": "25",
+          "title": "25"
+        },
+        {
+          "value": "50",
+          "title": "50"
+        }
+      ],
+      "description": "How many packages each search shows."
+    }
+  ],
+  "commands": [
+    {
+      "id": "search",
+      "title": "Search npm Packages",
+      "subtitle": "npm",
+      "keyword": "npm",
+      "search": "script"
+    }
+  ]
+}

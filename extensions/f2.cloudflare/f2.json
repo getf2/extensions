@@ -1,0 +1,55 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.cloudflare",
+  "version": "1.0.0",
+  "name": "Cloudflare",
+  "description": "Your Workers and Pages, and their deployments, with an API token of yours.",
+  "icon": "cloud.fill",
+  "color": "#f38020",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": {
+    "network": [
+      "api.cloudflare.com"
+    ]
+  },
+  "preferences": [
+    {
+      "id": "CLOUDFLARE_API_TOKEN",
+      "title": "API Token",
+      "type": "password",
+      "required": true,
+      "description": "Make one at dash.cloudflare.com › My Profile › API Tokens › Create Token › Custom token, with Read for Account Settings, Workers Scripts and Cloudflare Pages. It's used only to ask api.cloudflare.com.",
+      "link": "https://dash.cloudflare.com/profile/api-tokens"
+    },
+    {
+      "id": "pages",
+      "title": "Show Pages projects",
+      "type": "checkbox",
+      "default": true,
+      "description": "Beside each account's Workers."
+    }
+  ],
+  "commands": [
+    {
+      "id": "workers",
+      "title": "Workers & Pages",
+      "subtitle": "Cloudflare",
+      "icon": "cloud.fill",
+      "keyword": "cf",
+      "refresh": "15m",
+      "root": true
+    },
+    {
+      "id": "deployments",
+      "title": "Deployments",
+      "hidden": true
+    },
+    {
+      "id": "pages-deployments",
+      "title": "Pages Deployments",
+      "hidden": true
+    }
+  ]
+}

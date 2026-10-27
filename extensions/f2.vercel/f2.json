@@ -1,0 +1,36 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.vercel",
+  "version": "1.0.0",
+  "name": "Vercel",
+  "description": "Your Vercel projects and their deployments, and a failed build's log, with an access token of yours.",
+  "icon": "triangle.fill",
+  "color": "#000000",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["api.vercel.com"] },
+  "preferences": [
+    {
+      "id": "token",
+      "title": "Access Token",
+      "type": "password",
+      "required": true,
+      "description": "Make one at vercel.com › Account Settings › Tokens, its scope Full Account (or the one team you want). Vercel's tokens can't be made read-only: this one is only read with, and only sent to api.vercel.com.",
+      "link": "https://vercel.com/account/tokens"
+    },
+    {
+      "id": "team",
+      "title": "Team",
+      "type": "text",
+      "placeholder": "my-team or team_…",
+      "description": "A team's slug (as in its dashboard's address) or ID (in its Settings › General). Without it, your personal account, or the team a token's own scope is."
+    }
+  ],
+  "commands": [
+    { "id": "projects", "title": "Vercel Projects", "subtitle": "Vercel", "icon": "triangle.fill", "keyword": "vercel", "refresh": "15m", "root": true },
+    { "id": "recent", "title": "Recent Vercel Deployments", "subtitle": "Vercel", "icon": "clock.arrow.circlepath", "refresh": "1m" },
+    { "id": "deployments", "title": "Deployments", "hidden": true, "refresh": "1m" },
+    { "id": "log", "title": "Build Log", "hidden": true }
+  ]
+}

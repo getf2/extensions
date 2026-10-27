@@ -1,0 +1,15 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.kaomoji",
+  "version": "1.0.0",
+  "name": "Kaomoji",
+  "description": "A few hundred Japanese text faces, found by feeling (happy, shrug, table flip, cat…) and copied.",
+  "icon": "face.smiling",
+  "color": "#ff6f91",
+  "runtime": "javascript",
+  "main": "index.js",
+  "commands": [
+    { "id": "kaomoji", "title": "Kaomoji", "subtitle": "Copy a text face", "keyword": "kao" }
+  ]
+}

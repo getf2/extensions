@@ -1,0 +1,13 @@
+{
+  "name": "f2-extensions",
+  "private": true,
+  "description": "F2's extension store: the extensions, and what checks and publishes them.",
+  "scripts": {
+    "check": "bun tools/check.mjs",
+    "build": "bun tools/build.mjs _site"
+  },
+  "devDependencies": {
+    "ajv": "8.17.1",
+    "typescript": "7.0.2"
+  }
+}

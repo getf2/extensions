@@ -1,0 +1,40 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.tailwind",
+  "version": "1.0.0",
+  "name": "Tailwind CSS",
+  "description": "Tailwind CSS's colors, every shade with its class and value, and a search of its docs.",
+  "icon": "wind",
+  "color": "#38bdf8",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["knpxzi5b0m-dsn.algolia.net"] },
+  "preferences": [
+    {
+      "id": "utility",
+      "title": "Copy colors as",
+      "type": "dropdown",
+      "default": "bg",
+      "options": [
+        { "value": "bg", "title": "bg-sky-500" },
+        { "value": "text", "title": "text-sky-500" },
+        { "value": "border", "title": "border-sky-500" },
+        { "value": "ring", "title": "ring-sky-500" },
+        { "value": "outline", "title": "outline-sky-500" },
+        { "value": "fill", "title": "fill-sky-500" },
+        { "value": "stroke", "title": "stroke-sky-500" },
+        { "value": "decoration", "title": "decoration-sky-500" },
+        { "value": "shadow", "title": "shadow-sky-500" },
+        { "value": "from", "title": "from-sky-500" },
+        { "value": "via", "title": "via-sky-500" },
+        { "value": "to", "title": "to-sky-500" }
+      ],
+      "description": "The class Return copies a color as (in Tailwind Colors)."
+    }
+  ],
+  "commands": [
+    { "id": "colors", "title": "Tailwind Colors", "subtitle": "Tailwind CSS", "keyword": "tw" },
+    { "id": "docs", "title": "Search Tailwind Docs", "subtitle": "Tailwind CSS", "search": "script" }
+  ]
+}

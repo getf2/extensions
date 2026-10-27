@@ -1,0 +1,43 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.jira",
+  "version": "1.0.0",
+  "name": "Jira",
+  "description": "Your Jira issues and its search, read right in Quick Open, from your Jira Cloud site with an API token of yours.",
+  "icon": "square.stack.3d.up.fill",
+  "color": "#0052cc",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["*.atlassian.net"] },
+  "preferences": [
+    {
+      "id": "site",
+      "title": "Site",
+      "type": "text",
+      "required": true,
+      "placeholder": "yourcompany.atlassian.net",
+      "description": "Your Jira Cloud site's address, as in your browser: yourcompany.atlassian.net."
+    },
+    {
+      "id": "email",
+      "title": "Email",
+      "type": "text",
+      "required": true,
+      "placeholder": "you@yourcompany.com",
+      "description": "Your Atlassian account's email, the one the API token is yours by."
+    },
+    {
+      "id": "token",
+      "title": "API Token",
+      "type": "password",
+      "required": true,
+      "description": "Make one at id.atlassian.com › Security › API tokens › Create API token (not the one with scopes): it can see what your account can. It's used only to ask your site.",
+      "link": "https://id.atlassian.com/manage-profile/security/api-tokens"
+    }
+  ],
+  "commands": [
+    { "id": "mine", "title": "My Jira Issues", "subtitle": "Jira", "icon": "person.crop.circle", "keyword": "jira", "refresh": "5m", "root": true },
+    { "id": "search", "title": "Search Jira Issues", "subtitle": "Jira", "icon": "magnifyingglass", "search": "script" }
+  ]
+}
