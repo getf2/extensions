@@ -50,7 +50,7 @@ for (const id of readdirSync(join(root, 'extensions')).sort()) {
     color: m.color ?? null,
     author: id.split('.')[0],
     network: m.permissions?.network ?? [],
-    commands: (m.commands ?? []).filter((c) => !c.hidden).map((c) => ({ title: c.title, subtitle: c.subtitle ?? null, keyword: c.keyword ?? null })),
+    commands: (m.commands ?? []).filter((c) => !c.hidden).map((c) => ({ id: c.id, title: c.title, subtitle: c.subtitle ?? null, keyword: c.keyword ?? null })),
     preferences: (m.preferences ?? []).map((p) => ({ title: p.title, type: p.type ?? 'text', required: !!p.required })),
     updated: updated || null,
     path,
