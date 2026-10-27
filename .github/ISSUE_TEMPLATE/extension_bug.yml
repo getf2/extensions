@@ -1,0 +1,43 @@
+name: Something's wrong with an extension
+description: One from the Extension Store shows something wrong, or fails.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for telling us. Something wrong with F2 itself, not an extension, goes to [getf2/f2](https://github.com/getf2/f2/issues/new/choose).
+  - type: input
+    id: extension
+    attributes:
+      label: Which extension
+      description: Its name, and its version if you know it (the Extension Store in Quick Open shows it).
+      placeholder: Railway 1.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What it showed (an error's words exactly, if there was one), and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen
+      description: Which of its commands, what you typed or chose. Leave out tokens, and anything private in what it showed.
+    validations:
+      required: true
+  - type: input
+    id: f2
+    attributes:
+      label: F2's version
+      description: F2 › About F2, e.g. "0.2.0 (189)".
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Its output
+      description: On its page, ⌘K › Show Output, if anything's there. Check it for anything private first.
+      render: text
