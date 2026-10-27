@@ -28,8 +28,15 @@ jobs:
           BASE: ${{ github.base_ref }}
           AUTHOR: ${{ github.event.pull_request.user.login }}
           ASSOCIATION: ${{ github.event.pull_request.author_association }}
+          REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           if [ "$EVENT" = pull_request ]; then
+            # (Its maintainers by what they may do here: GitHub says
+            # CONTRIBUTOR of an organization's member whose membership
+            # isn't public.)
+            CAN=$(gh api "repos/$REPO/collaborators/$AUTHOR/permission" --jq .permission 2>/dev/null || echo none)
+            case "$CAN" in admin | maintain | write) ASSOCIATION=MEMBER ;; esac
             bun tools/check.mjs --changed "origin/$BASE" --author "$AUTHOR" --association "$ASSOCIATION"
           else
             bun tools/check.mjs
