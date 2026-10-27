@@ -1,6 +1,6 @@
 # F2 Extensions
 
-The extensions in [F2](https://getf2.com)'s store: commands for its Quick
+The extensions in [F2](https://getf2.com)'s store ([F2's own code](https://github.com/getf2/f2) is open source too): commands for its Quick
 Open, in JavaScript, each in a folder of its own here. F2 lists them in
 Settings › Extensions › Browse, and installs and updates them for you.
 

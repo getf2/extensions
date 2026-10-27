@@ -202,7 +202,7 @@ their `id`), each by its `id`: passwords as strings, checkboxes as
 On stdin, one JSON object, then end of file:
 
 ```json
-{ "command": "prs", "args": { "repo": "dagurleo/f2" }, "query": "", "preferences": { "size": "25" }, "f2": "0.1.10" }
+{ "command": "prs", "args": { "repo": "getf2/f2" }, "query": "", "preferences": { "size": "25" }, "f2": "0.1.10" }
 ```
 
 `args` are what the action that opened the page gave (`{}` for a
@@ -247,7 +247,7 @@ the next time it's opened.
   "section": "dagurleo",
   "accessory": "TypeScript · 2h ago",
   "tags": [{ "text": "Private", "color": "gray" }],
-  "keywords": ["dagurleo/f2"],
+  "keywords": ["getf2/f2"],
   "detail": { "markdown": "## F2\n…", "metadata": [{ "label": "Stars", "text": "12" }] },
   "actions": [ … ]
 }
@@ -276,10 +276,10 @@ The first action is Return's, the second ⌘Return's, and ⌘K lists them
 all, then F2's own (Refresh ⌘R, Show Output). Each does one thing:
 
 ```json
-{ "title": "Open on GitHub", "open": "https://github.com/dagurleo/f2", "icon": "safari" }
-{ "title": "Copy Clone URL", "copy": "git@github.com:dagurleo/f2.git" }
+{ "title": "Open on GitHub", "open": "https://github.com/getf2/f2", "icon": "safari" }
+{ "title": "Copy Clone URL", "copy": "git@github.com:getf2/f2.git" }
 { "title": "Show in F2", "reveal": "~/Projects/f2" }
-{ "title": "Pull Requests", "push": { "command": "prs", "args": { "repo": "dagurleo/f2" } } }
+{ "title": "Pull Requests", "push": { "command": "prs", "args": { "repo": "getf2/f2" } } }
 { "title": "Delete Branch", "run": { "command": "delete-branch", "args": { "name": "old" } }, "confirm": "Delete old?", "destructive": true }
 ```
 
