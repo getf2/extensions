@@ -13,8 +13,8 @@ list of them is signed, and each file's checked against it.
 
 [`extensions/`](extensions): Wikipedia, Hacker News, MDN, Can I Use,
 Tailwind CSS, Homebrew, crates.io, PyPI, npm, Lorem Ipsum and Kaomoji
-need no account. GitHub, Linear, Jira, Notion, Todoist, Vercel and
-Cloudflare work with a token of yours, kept in your Mac's keychain.
+need no account. GitHub, Linear, Jira, Notion, Todoist, Vercel, Railway
+and Cloudflare work with a token of yours, kept in your Mac's keychain.
 
 ## Writing one
 

@@ -1,0 +1,34 @@
+{
+  "$schema": "../../types/f2.schema.json",
+  "api": 1,
+  "id": "f2.railway",
+  "version": "1.0.0",
+  "name": "Railway",
+  "description": "Your Railway projects, their services and deployments as they build, and their logs, with a token of yours.",
+  "icon": "tram.fill",
+  "color": "#853bce",
+  "runtime": "javascript",
+  "main": "index.js",
+  "permissions": { "network": ["backboard.railway.com"] },
+  "preferences": [
+    {
+      "id": "token",
+      "title": "API Token",
+      "type": "password",
+      "required": true,
+      "description": "Make one at railway.com › Account Settings › Tokens. With “No workspace” it sees every workspace you're in; with one, that workspace's projects. It's only sent to backboard.railway.com.",
+      "link": "https://railway.com/account/tokens"
+    }
+  ],
+  "commands": [
+    { "id": "projects", "title": "Railway Projects", "subtitle": "Railway", "icon": "tram.fill", "keyword": "railway", "root": true },
+    { "id": "recent", "title": "Railway Deployments", "subtitle": "Railway", "icon": "clock.arrow.circlepath" },
+    { "id": "services", "title": "Services", "hidden": true },
+    { "id": "deployments", "title": "Deployments", "hidden": true },
+    { "id": "rollout", "title": "Rollout", "hidden": true },
+    { "id": "logs", "title": "Logs", "hidden": true },
+    { "id": "redeploy", "title": "Redeploy", "hidden": true },
+    { "id": "restart", "title": "Restart", "hidden": true },
+    { "id": "cancel", "title": "Cancel", "hidden": true }
+  ]
+}
