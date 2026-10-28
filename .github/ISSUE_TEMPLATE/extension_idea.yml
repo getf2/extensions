@@ -1,0 +1,38 @@
+name: An extension idea
+description: A service or tool you'd like in Quick Open, or more from one that's here.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are welcome, and so is making it yourself: README.md says how, and **New Extension…** in F2 starts one for you.
+  - type: input
+    id: service
+    attributes:
+      label: Which service or tool
+      description: Its name, or the extension's if it's already in the store.
+      placeholder: Spotify
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What you'd do with it
+      description: The commands you'd want, and what each would show or do.
+      placeholder: |
+        - Search my playlists, Return plays one
+        - …
+    validations:
+      required: true
+  - type: input
+    id: api
+    attributes:
+      label: Its API
+      description: Where its API is documented, if you know. An extension reaches a service only through one.
+  - type: dropdown
+    id: make
+    attributes:
+      label: Would you make it?
+      options:
+        - No, just the idea
+        - Yes, I'd like to make it

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Something wrong with F2 itself
+    url: https://github.com/getf2/f2/issues/new/choose
+    about: F2's own bugs and ideas are in its repo.
+  - name: How to make an extension
+    url: https://github.com/getf2/extensions/blob/main/docs/EXTENSIONS.md
+    about: Everything F2 understands, with examples of every kind in extensions/.
